@@ -1,69 +1,366 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="원효민">
+    <meta name="description" content="빈 강의실 이용 현황을 알려주는 사이트입니다.">
+    <meta name="keywords" content="강의실 이용, 빈 강의실, 인하대 강의실">
+    <meta name="generator" content="brakets">
+    <title>빈 강의실 이용 현황</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>INHA Pioneer</title>
+<!-- CSS STYLE -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+     <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <h1>INHA Pionner</h1>
-        <ul class="nav nav-fill">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="classRoom.html">Class Room</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="analysis.html">Analysis</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="readme.html">About</a>
-            </li>
-        </ul>
-    </header>
-
-    <div class="container">
-        <div class="row align-items-start">
-            <div class="col">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small>3 days ago</small>
-                        </div>
-                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                        <small>And some small print.</small>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small class="text-muted">3 days ago</small>
-                        </div>
-                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                        <small class="text-muted">And some muted small print.</small>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1">List group item heading</h5>
-                            <small class="text-muted">3 days ago</small>
-                        </div>
-                        <p class="mb-1">Some placeholder content in a paragraph.</p>
-                        <small class="text-muted">And some muted small print.</small>
-                    </a>
+    <!-- 스킵 내비게이션 -->
+    <div id="skip">
+        <a href="#cont_cont">컨텐츠 메뉴 바로가기</a>
+    </div>
+    <!-- //스킵 내비게이션 -->
+    
+        <div id="wrap">
+        <div id="header">
+            <div class="container">
+                 <div class="header">
+                <!-- //헤더 메뉴 -->
+                    <div class="header-tit">
+                        <h1>빈 강의실 이용 현황</h1><br>
+                        <a href="http://whm6149.dothome.co.kr/web/index.html">whm6149.dothome.co.kr</a>
+                    </div>
+                     <!-- //헤더 타이틀 -->
+                    <div class="header-icon"></div>
                 </div>
             </div>
-            <div class="col">
-                <h2>py-script</h2>
-            </div>
-
         </div>
-</body>
+        <!-- //header -->
 
-</html>
+        <div id="contents">
+            <div id="cont_cont">
+                <div class="container"></div>
+            </div>
+            <!-- //cont_cont -->
+        </div>
+             <div id="cont_cont">
+                <div class="container">
+                    <div class="cont">
+                        <div class="column col1">
+                            <h3><span class="ico_tit">1호관(1동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 1 -->
+                            <div class="notice1">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-307</a></li>
+                                    <li><a href="#">-435</a></li>
+                                    <li><a href="#">-522</a></li>
+                                    <li><a href="#">-534</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 1 -->
+                        </div>
+                        <!-- //col1 -->    
+                        <div class="column col2">
+                            <h3><span class="ico_tit">2호남관(2-1동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 2 -->
+                            <div class="notice2">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-225</a></li>
+                                    <li><a href="#">-227</a></li>
+                                    <li><a href="#">-228</a></li>
+                                    <li><a href="#">-229</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 2 -->
+                        </div>
+                        <!-- //col2 -->   
+                        <div class="column col3">
+                            <h3><span class="ico_tit">2호동관(2-3동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 3 -->
+                            <div class="notice3">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-250</a></li>
+                                    <li><a href="#">-252</a></li>
+                                    <li><a href="#">-256</a></li>
+                                    <li><a href="#">-259</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 3 -->
+                        </div>
+                        <!-- //col3 -->    
+                        <div class="column col4">
+                            <h3><span class="ico_tit">2호북관(2-4동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 4 -->
+                            <div class="notice1">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-274</a></li>
+                                    <li><a href="#">-363A</a></li>
+                                    <li><a href="#">-363B</a></li>
+                                    <li><a href="#">-364</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 4 -->
+                        </div>
+                        <!-- //col4 -->
+                        <div class="column col5">
+                            <h3><span class="ico_tit">4호관(4동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 5 -->
+                            <div class="notice5">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-313</a></li>
+                                    <li><a href="#">-317</a></li>
+                                    <li><a href="#">-320</a></li>
+                                    <li><a href="#">-335</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 5 -->
+                        </div>
+                        <!-- //col5 -->    
+                        <div class="column col6">
+                            <h3><span class="ico_tit">5호남관(5-1동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 6 -->
+                            <div class="notice6">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-025</a></li>
+                                    <li><a href="#">-132</a></li>
+                                    <li><a href="#">-136</a></li>
+                                    <li><a href="#">-137</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 6 -->
+                        </div>
+                        <!-- //col6 -->   
+                        <div class="column col7">
+                            <h3><span class="ico_tit">5호동관(5-4동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 7 -->
+                            <div class="notice7">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-102</a></li>
+                                    <li><a href="#">-105A</a></li>
+                                    <li><a href="#">-105B</a></li>
+                                    <li><a href="#">-106A</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 7 -->
+                        </div>
+                        <!-- //col7 -->   
+                        <div class="column col8">
+                            <h3><span class="ico_tit">5호서관(5-5동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 8 -->
+                            <div class="notice8">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-252</a></li>
+                                    <li><a href="#">-255</a></li>
+                                    <li><a href="#">-260</a></li>
+                                    <li><a href="#">-352</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 8 -->
+                        </div>
+                        <!-- //col8 -->   
+                        <div class="column col9">
+                            <h3><span class="ico_tit">6호관(6동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 9 -->
+                            <div class="notice9">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-126</a></li>
+                                    <li><a href="#">-127</a></li>
+                                    <li><a href="#">-220</a></li>
+                                    <li><a href="#">-226</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 9 -->
+                        </div>
+                        <!-- //col9 -->   
+                        <div class="column col10">
+                            <h3><span class="ico_tit">8호관:하이테크센터(8동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 10 -->
+                            <div class="notice10">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-001</a></li>
+                                    <li><a href="#">-002</a></li>
+                                    <li><a href="#">-003</a></li>
+                                    <li><a href="#">-010</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 10 -->
+                        </div>
+                        <!-- //col10 -->  
+                        <div class="column col11">
+                            <h3><span class="ico_tit">9호관(9동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 11 -->
+                            <div class="notice11">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-003</a></li>
+                                    <li><a href="#">-006</a></li>
+                                    <li><a href="#">-101</a></li>
+                                    <li><a href="#">-118A</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 11 -->
+                        </div>
+                        <!-- //col11 -->  
+                        <div class="column col12">
+                            <h3><span class="ico_tit">서호관(10동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 12 -->
+                            <div class="notice12">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-103A</a></li>
+                                    <li><a href="#">-103B</a></li>
+                                    <li><a href="#">-103C</a></li>
+                                    <li><a href="#">-103D</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 12 -->
+                        </div>
+                        <!-- //col12 --> 
+                        <div class="column col13">
+                            <h3><span class="ico_tit">사회교육관(14동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 13 -->
+                            <div class="notice13">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-101A</a></li>
+                                    <li><a href="#">-101B</a></li>
+                                    <li><a href="#">-121</a></li>
+                                    <li><a href="#">-205</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 13 -->
+                        </div>
+                        <!-- //col13 -->  
+                        <div class="column col14">
+                            <h3><span class="ico_tit">법학전문대학원(13동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 14 -->
+                            <div class="notice14">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-001</a></li>
+                                    <li><a href="#">-021B</a></li>
+                                    <li><a href="#">-021C</a></li>
+                                    <li><a href="#">-021D</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 14 -->
+                        </div>
+                        <!-- //col14 -->
+                        <div class="column col15">
+                            <h3><span class="ico_tit">김현태 인하드림센터(39동)</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 15 -->
+                            <div class="notice15">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-401</a></li>
+                                    <li><a href="#">-402</a></li>
+                                    <li><a href="#">-403</a></li>
+                                    <li><a href="#">-404</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 15 -->
+                        </div>
+                        <!-- //col15 -->
+                        <div class="column col16">
+                            <h3><span class="ico_tit">60주년기념관</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 16 -->
+                            <div class="notice16">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-012</a></li>
+                                    <li><a href="#">-013</a></li>
+                                    <li><a href="#">-014</a></li>
+                                    <li><a href="#">-015</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 16 -->
+                        </div>
+                        <!-- //col16 -->
+                        <div class="column col17">
+                            <h3><span class="ico_tit">항공우주융합캠퍼스</span></h3>
+                            <p class="ico_desc"></p>
+                            <!-- 게시판 17 -->
+                            <div class="notice17">
+                                <h4>강의실</h4>
+                                <ul>
+                                    <li><a href="#">-201</a></li>
+                                    <li><a href="#">-202</a></li>
+                                    <li><a href="#">-203</a></li>
+                                    <li><a href="#">-204</a></li>
+                                </ul>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <!-- //게시판 17 -->
+                        </div>
+                        <!-- //col17 --> 
+                        
+                </div>
+            </div>
+        <!-- //contents -->
+                    
+         <div id="footer">
+            <div class="container">
+                <h2 class="ir_su"></h2>
+                <div class="footer">
+                    <ul>
+                        <li>창의적 정보통신공학설계</li>
+                        <li>202202-ICE1002-004</li>
+                        <li>팀장-이창용</li>
+                        <li>팀원-원효민,장현수</li>
+                        <li>웹 제작-원효민</li>
+                    </ul>
+                    <address>
+                        Copyright©whm6149.co.kr All Right Reserved
+                    </address>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->               
+</body>
+</html>  

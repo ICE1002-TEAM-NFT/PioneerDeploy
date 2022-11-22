@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* 스킵 내비게이션  */
+#skip {position: relative;}
+#skip a {position: absolute; left: 0px; top: -35px; border: 1px solid #fff; color: #fff; background: #333; line-height: 30px; width: 180px; text-align: center;}
+#skip a:active,
+#skip a:focus {top: 0;}
+
+/* 레이아웃 */
+#wrap {width: 100%;}
+#header {width: 100%; height: 325px; background: url(../img/header2.png) center top repeat-x;}
+#contents_cont {width: 100%; height: 800px; background: #ebfbff;}
+#footer {border-top: 1px solid #f8f8f8;}
+
+/* 컨텐츠 레이아웃 */
+#cont_cont {background: #ebfbff;}
+
+/* 컨테이너 */
+.container {width: 990px; margin: 0 auto; height: inherit; background: rgba(255,255,255,0.3);}
+
+/* 헤더 */
+.header {}
+.header .header-tit {text-align: center;}
+.header .header-tit h1 {background-color: #86c3b3ab; font-size: 28px; padding: 5px 20px 6px 20px; display: inline-block; color: #666; margin-top: 40px; font-weight: normal; text-transform: uppercase;}
+.header .header-tit a {display: inline-block; background-color: #d0fdf1ab; font-size: 18px; color: #afafaf; padding: 5px 20px 6px 20px; margin-top: -5px;}
+
+.header .header-icon {}
+
+/* 컨텐츠 */
+.cont {overflow: hidden; padding-top: 30px;}
+.cont .column {position: relative; float: left; width: 280px; height: 160px; margin: 0 30px 30px 0; padding-right: 30px;}
+.cont .column.col1 {border-right: 1px solid #c8c8c8;}
+.cont .column.col2 {border-right: 1px solid #c8c8c8;}
+.cont .column.col3 {margin-right: 0; padding-right: 0;}
+.cont .column.col4 {border-right: 1px solid #c8c8c8;}
+.cont .column.col5 {border-right: 1px solid #c8c8c8;}
+.cont .column.col6 {margin-right: 0; padding-right: 0;}
+.cont .column.col7 {border-right: 1px solid #c8c8c8;}
+.cont .column.col8 {border-right: 1px solid #c8c8c8;}
+.cont .column.col9 {margin-right: 0; padding-right: 0;}
+.cont .column.col10 {border-right: 1px solid #c8c8c8;}
+.cont .column.col11 {border-right: 1px solid #c8c8c8;}
+.cont .column.col12 {margin-right: 0; padding-right: 0;}
+.cont .column.col13 {border-right: 1px solid #c8c8c8;}
+.cont .column.col14 {border-right: 1px solid #c8c8c8;}
+.cont .column.col15 {margin-right: 0; padding-right: 0;}
+.cont .column.col16 {border-right: 1px solid #c8c8c8;}
+.cont .column.col17 {border-right: 1px solid #c8c8c8;}
+
+.cont .column .ico_tit {padding-left: 10px; font-size: 16px; color: #2c94c4;}
+.cont .column .ico_desc {padding-left: 700px; border-bottom: 1px solid #d0d0d0; padding-bottom: 5px; margin-bottom: 15px;} 
+
+/* 게시판 1 */
+.notice1 {position: relative;}
+.notice1 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice1 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice1 ul li a {font-size: 12px;}
+.notice1 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 2 */
+.notice2 {position: relative;}
+.notice2 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice2 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice2 ul li a {font-size: 12px;}
+.notice2 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 3 */
+.notice3 {position: relative;}
+.notice3 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice3 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice3 ul li a {font-size: 12px;}
+.notice3 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 4 */
+.notice4 {position: relative;}
+.notice4 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice4 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice4 ul li a {font-size: 12px;}
+.notice4 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 5 */
+.notice5 {position: relative;}
+.notice5 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice5 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice5 ul li a {font-size: 12px;}
+.notice5 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 6 */
+.notice6 {position: relative;}
+.notice6 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice6 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice6 ul li a {font-size: 12px;}
+.notice6 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 7 */
+.notice7 {position: relative;}
+.notice7 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice7 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice7 ul li a {font-size: 12px;}
+.notice7 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 8 */
+.notice8 {position: relative;}
+.notice8 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice8 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice8 ul li a {font-size: 12px;}
+.notice8 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 9 */
+.notice9 {position: relative;}
+.notice9 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice9 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice9 ul li a {font-size: 12px;}
+.notice9 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 10 */
+.notice10 {position: relative;}
+.notice10 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice10 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice10 ul li a {font-size: 12px;}
+.notice10 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 11 */
+.notice11 {position: relative;}
+.notice11 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice11 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice11 ul li a {font-size: 12px;}
+.notice11 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 12 */
+.notice12 {position: relative;}
+.notice12 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice12 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice12 ul li a {font-size: 12px;}
+.notice12 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 13 */
+.notice13 {position: relative;}
+.notice13 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice13 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice13 ul li a {font-size: 12px;}
+.notice13 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 14 */
+.notice14 {position: relative;}
+.notice14 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice14 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice14 ul li a {font-size: 12px;}
+.notice14 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 15 */
+.notice15 {position: relative;}
+.notice15 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice15 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice15 ul li a {font-size: 12px;}
+.notice15 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 16 */
+.notice16 {position: relative;}
+.notice16 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice16 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice16 ul li a {font-size: 12px;}
+.notice16 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 17 */
+.notice17 {position: relative;}
+.notice17 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice17 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice17 ul li a {font-size: 12px;}
+.notice17 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 푸터 */
+.footer {padding: 25px 0; text-align: center;}
+.footer ul {margin-bottom: 20px;}
+.footer li {position: relative; display: inline; padding: 0 7px 0 10px;}
+.footer li:before {content: ''; width: 1px; height: 12px; background: #ccc; position: absolute; left: 0; top: 2px;}
+.footer li:first-child:before {width: 0; height: 0;}
+.footer .w3c {margin-top: 15px;}

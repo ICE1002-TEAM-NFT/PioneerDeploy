@@ -11,6 +11,17 @@ def create_app():
     @app.route('/')
     def home():
         return render_template('index.html')
-    
-    return app
 
+    @app.route('/classRoom')
+    def classroom():
+        return render_template('classRoom.html')
+    
+    @app.route('/analysis')
+    def analysis():
+        return render_template('analysis.html')
+    
+    @app.route('/about')
+    def about():
+        return render_template('readme.html')
+
+    return app
