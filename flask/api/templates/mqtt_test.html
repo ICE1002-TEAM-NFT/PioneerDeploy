@@ -1,0 +1,32 @@
+<script>
+    // # 비동기 방식 AJAX 요청
+
+        // 1. XMLHttpRequest 객체 생성
+        const request = new XMLHttpRequest();
+
+        // 2. 요청 초기화
+        request.open('GET', 'https://cors-anywhere.herokuapp.com/34.125.39.205:5000/status', true);
+
+        // 3. 요청 전송
+        request.send();
+
+        // 4. onreadystatechage 이벤트리스너 등록
+        request.onreadystatechange = function(event){
+            // 1) 데이터를 다 받았고, 2) 응답코드 200(성공)을 받았는지 체크
+            if(request.readyState == 4 && request.status == 200){
+
+                // 응답받은 데이터 체크
+                const responseData = request.responseText;
+
+                console.log(responseData);
+
+            }
+        }
+        
+        // 참고. 동기방식 요청 : 응답이 올때까지 브라우저가 멈추므로 더이상 사용하지 않음
+        /*
+        const request = new XMLHttpRequest();
+        request.open('GET', '/요청경로', false);
+        request.send();
+        */
+</script>
