@@ -42,12 +42,16 @@ def mqtt(app):
     tmp="none"
     @mqtt_client.on_message()
     def handle_mqtt_message(client, userdata, message):
-        data = dict(
-            topic=message.topic,
-            payload=message.payload.decode()
-        )
-        tmp = 'Received message on topic: {topic} with payload: {payload}'.format(**data)
-        print(tmp)
+        # data = dict(
+        #     topic=message.topic,
+        #     payload=message.payload.decode()
+        # )
+        tmp = message.payload.decode()
+        # print(tmp)
+        f = open("data.txt", 'a')
+        f.writelines(tmp+"\n")
+        f.close()
+
 
 
     @app.route('/publish')
@@ -58,7 +62,10 @@ def mqtt(app):
     
     @app.route('/check')
     def check():
-        return tmp
+
+        f = open("data.txt", 'r')
+        ans = f.read()
+        return ans
     
     return app
 
