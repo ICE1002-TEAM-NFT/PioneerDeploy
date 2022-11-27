@@ -1,9 +1,13 @@
 from flask import Flask, jsonify, redirect, render_template, request, session, url_for
 from flask_mqtt import Mqtt
+import datetime
+import pandas as pd
+from fun import csv_make, csv_add
 
 
 def create_app():
 
+    csv_make()
     app = Flask(__name__)
 
     @app.route('/')
@@ -14,8 +18,9 @@ def create_app():
     def home2():
         return render_template('index2.html')
     
-    @app.route('/esp32')
-    def esp32_get():
+    @app.route('/esp32', methods=['GET'])
+    def esp32_data_get():
+
         return render_template('mqtt_test.html')
 
     return mqtt(app)
@@ -42,15 +47,16 @@ def mqtt(app):
     tmp="none"
     @mqtt_client.on_message()
     def handle_mqtt_message(client, userdata, message):
-        # data = dict(
-        #     topic=message.topic,
-        #     payload=message.payload.decode()
-        # )
+
         tmp = message.payload.decode()
+
+        ### This is for test
         # print(tmp)
-        f = open("data.txt", 'a')
-        f.writelines(tmp+"\n")
-        f.close()
+        # f = open("data.txt", 'a')
+        # f.writelines(tmp+"\n")
+        # f.close()
+
+        csv_add(tmp)
 
 
 
@@ -60,12 +66,13 @@ def mqtt(app):
         publish_result = mqtt_client.publish("esp32/IR", "001")
         return "1"
     
-    @app.route('/check')
-    def check():
+    ### This is for debuging
+    # @app.route('/check')
+    # def check():
 
-        f = open("data.txt", 'r')
-        ans = f.read()
-        return ans
+    #     f = open("data.txt", 'r')
+    #     ans = f.read()
+    #     return ans
     
     return app
 
