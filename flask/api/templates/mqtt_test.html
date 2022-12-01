@@ -1,32 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- CSS For Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Javascript For Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary" onclick="fn_a()">Primary</button>
+    
+    <br />
+    <br />
+    <br />
+
+    <div id="title">찌아스</div>
+</body>
+
 <script>
-    // # 비동기 방식 AJAX 요청
+    var a;
 
-        // 1. XMLHttpRequest 객체 생성
-        const request = new XMLHttpRequest();
-
-        // 2. 요청 초기화
-        request.open('GET', 'https://cors-anywhere.herokuapp.com/34.125.39.205:5000/status', true);
-
-        // 3. 요청 전송
-        request.send();
-
-        // 4. onreadystatechage 이벤트리스너 등록
-        request.onreadystatechange = function(event){
-            // 1) 데이터를 다 받았고, 2) 응답코드 200(성공)을 받았는지 체크
-            if(request.readyState == 4 && request.status == 200){
-
-                // 응답받은 데이터 체크
-                const responseData = request.responseText;
-
-                console.log(responseData);
-
-            }
-        }
+    function fn_fetch() 
+    {
+        const response = fetch("/test2");
         
-        // 참고. 동기방식 요청 : 응답이 올때까지 브라우저가 멈추므로 더이상 사용하지 않음
-        /*
-        const request = new XMLHttpRequest();
-        request.open('GET', '/요청경로', false);
-        request.send();
-        */
+        return response.then(res => res.json());
+    }
+
+    async function fn_a() {
+        a = await fn_fetch();
+
+        console.log(a);
+        console.log(a['test']);
+
+        var yes = document.getElementById("title");
+
+        yes.innerHTML = a['test'];
+    }
 </script>
+
+</html>

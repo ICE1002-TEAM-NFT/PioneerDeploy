@@ -7,7 +7,7 @@ class class_room:
 
 def csv_make():
     class_room = [307, 435, 522, 534]
-    class_info = ["empty", "empty", "empty", "empty"]
+    class_info = ["Empty", "Empty", "Empty", "Empty"]
     used_time = [0, 0, 0, 0]
 
     df = pd.DataFrame(class_room, columns = ['class_room'])
@@ -25,9 +25,9 @@ def csv_add(tmp):
         rdr = csv.reader(f)
         lines = []
         for line in rdr:
-            print(line)
+            # print(line)
             if line[1] == number:
-                print(1)
+                # print(1)
                 line[2] = info
                 line[3] = datetime.datetime.now()
             lines.append(line)
@@ -40,5 +40,6 @@ def csv_add(tmp):
         f.close()
         return 1
 
+#This is for test fun.py
 csv_make()
-csv_add("435, using")
+csv_add("435, Using")
