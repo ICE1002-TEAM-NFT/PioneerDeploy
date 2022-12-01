@@ -18,7 +18,7 @@ def csv_make():
 
 def csv_add(tmp):
         number = tmp[0:3]
-        info = tmp[5:10]
+        info = tmp[4:10]
         
         
         f = open("data.csv", "r")
