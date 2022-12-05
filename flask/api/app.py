@@ -43,24 +43,24 @@ def create_app():
         f.close()
         return jsonify(json_data)
     
-    @app.route('/esp32', methods=['GET'])
-    def esp32_data_get():
-        # f = open("data.csv", "r")
-        # rdr = csv.reader(f)
-        # lines = []
-        # for line in rdr:
-        #     print(line)
-        #     if line[1] == number:
-        #         pass
+    # @app.route('/esp32', methods=['GET'])
+    # def esp32_data_get():
+    #     # f = open("data.csv", "r")
+    #     # rdr = csv.reader(f)
+    #     # lines = []
+    #     # for line in rdr:
+    #     #     print(line)
+    #     #     if line[1] == number:
+    #     #         pass
 
-        # f.close()
-        return render_template('mqtt_test.html')
+    #     # f.close()
+    #     return render_template('mqtt_test.html')
     
-    @app.route('/test2', methods=['GET', 'POST'])
-    def get_data():
-        return jsonify({
-            'test': 'tested',
-        })
+    # @app.route('/test2', methods=['GET', 'POST'])
+    # def get_data():
+    #     return jsonify({
+    #         'test': 'tested',
+    #     })
 
     return mqtt(app)
 

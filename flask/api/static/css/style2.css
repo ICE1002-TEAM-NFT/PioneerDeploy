@@ -28,9 +28,10 @@
 
 /* 컨텐츠 */
 .cont {overflow: hidden; padding-top: 30px;}
-.cont .column {position: relative; float: left; width: 280px; height: 160px; margin: 0 30px 30px 0; padding-right: 30px;}
+.cont .column {position: relative; float: left; width: 280px; height: 250px; margin: 0 30px 30px 0; padding-right: 30px;}
 .cont .column.col1 {border-right: 1px solid #c8c8c8;}
-
+.cont .column.col2 {border-right: 1px solid #c8c8c8;}
+.cont .column.col3 {margin-right: 0; padding-right: 0;}
 
 .cont .column .ico_tit {padding-left: 10px; font-size: 16px; color: #2c94c4;}
 .cont .column .ico_desc {padding-left: 700px; border-bottom: 1px solid #d0d0d0; padding-bottom: 5px; margin-bottom: 15px;} 
@@ -41,6 +42,20 @@
 .notice1 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .notice1 ul li a {font-size: 12px;}
 .notice1 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 2 */
+.notice2 {position: relative;}
+.notice2 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice2 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice2 ul li a {font-size: 12px;}
+.notice2 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
+
+/* 게시판 3 */
+.notice3 {position: relative;}
+.notice3 h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice3 ul li {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice3 ul li a {font-size: 12px;}
+.notice3 a.more {position: absolute; right: 0; top: 0; font-size: 11px;}
 
 /* 푸터 */
 .footer {padding: 25px 0; text-align: center;}

@@ -10,8 +10,8 @@
     <title>빈 강의실 이용 현황</title>
 
     <!-- CSS STYLE -->
-    <link rel="stylesheet" href="css/reset2.css">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="/static/css/reset2.css">
+    <link rel="stylesheet" href="/static/css/style2.css">
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -52,20 +52,21 @@
                 <div class="cont">
                     <div class="column col1">
                         <h3><span class="ico_tit">5호동관(5-4동)</span></h3>
+                        <button id="change_button" type="button" onclick='fn_display()' >정보 불러오기</button>
                         <p class="ico_desc"></p>
                         <!-- 게시판 1 -->
                         <div class="notice1">
                             <h4>강의실</h4>
                             <ul>
-                                <li><a href="index3.html">-102</a></li>
-                                <li><a href="index4.html">-105A</a></li>
-                                <li><a href="#">-105B</a></li>
-                                <li><a href="#">-106A</a></li>
-                                <li><a href="#">-106B</a></li>
-                                <li><a href="#">-107A</a></li>
-                                <li><a href="#">-107B</a></li>
-                                <li><a href="#">-110</a></li>
-                                <li><a href="#">-111</a></li>
+                                <li><a href="#">-102</a><p class="102_state">빈 강의실입니다.</p></li>
+                                <li><a href="#">-105A</a><p>빈 강의실입니다.</p></li>
+                                <li><a href="#">-105B</a><p>빈 강의실입니다.</p></li>
+                                <li><a href="#">-106A</a><p>빈 강의실입니다.</p></li>
+                                <li><a href="#">-106B</a><p>빈 강의실입니다.</p></li>
+                                <li><a href="#">-107A</a><p>빈 강의실입니다.</p></li>
+                                <li><a href="#">-107B</a><p>빈 강의실입니다.</p></li>
+                                <li><a href="#">-110</a><p>빈 강의실입니다.</p></li>
+                                <li><a href="#">-111</a><p>빈 강의실입니다.</p></li>
                             </ul>
 
                         </div>
@@ -156,11 +157,23 @@
         tmp = await fn_fetch();
 
         console.log(tmp);
-        // console.log(a['info']);
-        // console.log(a['used_time']);
+        console.log(JSON.parse(tmp))
 
+        const data = JSON.parse(tmp);
+        const state102 = document.getElementsByClassName('102_state')[0];
+
+        if (data.info == "Empty") {
+            state102.innerText = "빈 강의실입니다!";
+            console.log("siba");
+        }
+        else {
+            state102.innerText = "사용중인 강의실입니다.";
+            console.log("SSibal");
+        }
 
     }
+
+
 </script>
 
 </html>
