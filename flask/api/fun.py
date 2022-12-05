@@ -25,9 +25,7 @@ def csv_add(tmp):
         rdr = csv.reader(f)
         lines = []
         for line in rdr:
-            # print(line)
             if line[1] == number:
-                # print(1)
                 line[2] = info
                 line[3] = datetime.datetime.now()
             lines.append(line)
@@ -36,8 +34,14 @@ def csv_add(tmp):
         f = open("data.csv", "w", newline="")
         wr = csv.writer(f)
         wr.writerows(lines)
-
         f.close()
+
+        f = open("data.txt", 'a')
+        now = datetime.datetime.now()
+        now_string = now.strftime("%Y년 %m월 %d일 %H시 %M분 %S.%f초")
+        f.writelines(tmp+now_string+" "+"\n")
+        f.close()
+
         return 1
 
 #This is for test fun.py
