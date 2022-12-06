@@ -35,7 +35,7 @@ def create_app():
         lines = []
         for line in rdr:
             
-            if line[1] == "307":
+            if line[1] == "435":
                 tmp_data['info'] = line[2]
                 tmp_data['used_time'] = line[3]
 
