@@ -188,24 +188,23 @@
 
             var data_time = new Date(last_time);
             var today2 = new Date();
-            var sibal = today2.getTime() - data_time.getTime();
+            var s_tmp = today2.getTime() - data_time.getTime();
 
-            console.log(sibal)
             console.log(data_time.getTime())
             
-            if (sibal > 24*60*60*1000) {
-            state102.innerText = Math.floor(sibal/(1000*24*60*60)) +" 일 전에 사용하였습니다."
+            if (s_tmp > 24*60*60*1000) {
+            state102.innerText = Math.floor(s_tmp/(1000*24*60*60)) +" 일 전에 사용하였습니다."
             }
 
-            else if (sibal > 60*60*1000) {
-            state102.innerText = Math.floor(sibal/(1000*60*60)) +" 시간 전에 사용하였습니다."
+            else if (s_tmp > 60*60*1000) {
+            state102.innerText = Math.floor(s_tmp/(1000*60*60)) +" 시간 전에 사용하였습니다."
             }
 
-            else if (sibal > 60*1000) {
-            state102.innerText = Math.floor(sibal/(1000*60)) +" 분 전에 사용하였습니다."
+            else if (s_tmp > 60*1000) {
+            state102.innerText = Math.floor(s_tmp/(1000*60)) +" 분 전에 사용하였습니다."
             }
-            else if (sibal > 1000) {
-            state102.innerText = Math.floor(sibal/(1000)) +" 초 전에 사용하였습니다."
+            else if (s_tmp > 1000) {
+            state102.innerText = Math.floor(s_tmp/(1000)) +" 초 전에 사용하였습니다."
             }
             just_status = " Empty";
         }
