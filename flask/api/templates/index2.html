@@ -177,6 +177,7 @@
         
 
         if (data.info == " Using") {
+            just_status = " Using";
             state102.innerText = "사용중입니다!";
         }
 
@@ -194,22 +195,19 @@
             
             if (sibal > 24*60*60*1000) {
             state102.innerText = Math.floor(sibal/(1000*24*60*60)) +" 일 전에 사용하였습니다."
-            just_status = " Empty";
             }
 
             else if (sibal > 60*60*1000) {
             state102.innerText = Math.floor(sibal/(1000*60*60)) +" 시간 전에 사용하였습니다."
-            just_status = " Empty";
             }
 
             else if (sibal > 60*1000) {
             state102.innerText = Math.floor(sibal/(1000*60)) +" 분 전에 사용하였습니다."
-            just_status = " Empty";
             }
             else if (sibal > 1000) {
             state102.innerText = Math.floor(sibal/(1000)) +" 초 전에 사용하였습니다."
-            just_status = " Empty";
             }
+            just_status = " Empty";
         }
 
         
