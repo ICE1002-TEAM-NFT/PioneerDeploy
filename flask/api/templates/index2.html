@@ -150,7 +150,10 @@
     var today = new Date();
     var hours = ('0' + today.getHours()).slice(-2); 
     var minutes = ('0' + today.getMinutes()).slice(-2);
-    var seconds = ('0' + today.getSeconds()).slice(-2); 
+    var seconds = ('0' + today.getSeconds()).slice(-2);
+    
+    var just_status = " Empty";
+    var last_time = new Date();
 
     function fn_fetch() {
         const response = fetch("/building_1/307");
@@ -162,68 +165,54 @@
         tmp = await fn_fetch();
 
         console.log(tmp);
-        console.log(JSON.parse(tmp))
+        console.log(JSON.parse(tmp));
 
         const data = JSON.parse(tmp);
         const state102 = document.getElementsByClassName('102_state')[0];
 
-        var sub_used_time_sec = Number(data.used_time.substr(17, 2))
-        var sub_used_time_min = Number(data.used_time.substr(14, 2))
-        var sub_used_time_hour = Number(data.used_time.substr(11, 2))
+        var sub_used_time_sec = Number(data.used_time.substr(17, 2));
+        var sub_used_time_min = Number(data.used_time.substr(14, 2));
+        var sub_used_time_hour = Number(data.used_time.substr(11, 2));
 
-        if (data.info == "Empty") {
-            // console.log(data.used_time)
-            state102.innerText = data.used_time+"빈 강의실입니다!";
-            // console.log(today)
+        
 
-            
-        }
-
-        else if (data.info == " Empty") {
-            // console.log(data.used_time)
-            // state102.innerText = data.used_time+"빈 강의실입니다!";
-            // console.log(today)
-            // console.log(sub_used_time_sec)
-            // console.log(sub_used_time_min)
-            // console.log(sub_used_time_hour)
-
-            if (hours == sub_used_time_hour + 9) {
-                if (minutes == sub_used_time_min) {
-
-                    if (seconds - sub_used_time_sec < 0) {
-                        tmp_time = 60 - seconds + sub_used_time_sec;
-                    }
-                    else {
-                        tmp_time = seconds - sub_used_time_sec;
-                    }
-                    state102.innerText = tmp_time+"초 전에 이용되었습니다.";
-                }
-
-                else {
-                    if (minutes - sub_used_time_min < 0) {
-                        tmp_time = 60 - minutes + sub_used_time_min;
-                    }
-                    else {
-                        tmp_time = minutes - sub_used_time_min;
-                    }
-                    state102.innerText = tmp_time+"분 전에 이용되었습니다.";
-                }
-            }
-            
-            else {
-                if (hours - sub_used_time_hour < 0) {
-                        tmp_time = 24 - hours + sub_used_time_hour;
-                    }
-                        else {
-                        tmp_time = hours - sub_used_time_hour;
-                    }
-                    state102.innerText = tmp_time+"시간 전에 이용되었습니다.";
-            }
+        if (data.info == " Using") {
+            state102.innerText = "사용중입니다!";
         }
 
         else {
-            state102.innerText = "사용중인 강의실입니다.";
+            if (just_status == " Using") {
+                last_time = data.used_time;
+            }
+
+            var data_time = new Date(last_time);
+            var today2 = new Date();
+            var sibal = today2.getTime() - data_time.getTime();
+
+            console.log(sibal)
+            console.log(data_time.getTime())
+            
+            if (sibal > 24*60*60*1000) {
+            state102.innerText = Math.floor(sibal/(1000*24*60*60)) +" 일 전에 사용하였습니다."
+            just_status = " Empty";
+            }
+
+            else if (sibal > 60*60*1000) {
+            state102.innerText = Math.floor(sibal/(1000*60*60)) +" 시간 전에 사용하였습니다."
+            just_status = " Empty";
+            }
+
+            else if (sibal > 60*1000) {
+            state102.innerText = Math.floor(sibal/(1000*60)) +" 분 전에 사용하였습니다."
+            just_status = " Empty";
+            }
+            else if (sibal > 1000) {
+            state102.innerText = Math.floor(sibal/(1000)) +" 초 전에 사용하였습니다."
+            just_status = " Empty";
+            }
         }
+
+        
 
     }
 

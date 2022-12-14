@@ -14,9 +14,7 @@ def create_app():
         'info': "0",
         'used_time': 0,
     }
-
-    # json_data = json.dumps(tmp_data)
-
+    
     csv_make()
     app = Flask(__name__)
 
@@ -42,25 +40,6 @@ def create_app():
         json_data = json.dumps(tmp_data)
         f.close()
         return jsonify(json_data)
-    
-    # @app.route('/esp32', methods=['GET'])
-    # def esp32_data_get():
-    #     # f = open("data.csv", "r")
-    #     # rdr = csv.reader(f)
-    #     # lines = []
-    #     # for line in rdr:
-    #     #     print(line)
-    #     #     if line[1] == number:
-    #     #         pass
-
-    #     # f.close()
-    #     return render_template('mqtt_test.html')
-    
-    # @app.route('/test2', methods=['GET', 'POST'])
-    # def get_data():
-    #     return jsonify({
-    #         'test': 'tested',
-    #     })
 
     return mqtt(app)
 
@@ -87,33 +66,14 @@ def mqtt(app):
     tmp="none"
     @mqtt_client.on_message()
     def handle_mqtt_message(client, userdata, message):
-
         tmp = message.payload.decode()
-
-        ### This is for test
-        # print(tmp)
-        # f = open("data.txt", 'a')
-        # f.writelines(tmp+"\n")
-        # f.close()
-
         csv_add(tmp)
-
-
 
     @app.route('/publish')
     def publish_message():
-        # request_data = request.get_json()
         publish_result = mqtt_client.publish("esp32/IR", "001")
         return "1"
-    
-    ### This is for debuging
-    # @app.route('/check')
-    # def check():
 
-    #     f = open("data.txt", 'r')
-    #     ans = f.read()
-    #     return ans
-    
     return app
 
 

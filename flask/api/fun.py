@@ -27,7 +27,7 @@ def csv_add(tmp):
         for line in rdr:
             if line[1] == number:
                 line[2] = info
-                line[3] = datetime.datetime.now()
+                line[3] = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
             lines.append(line)
 
         
